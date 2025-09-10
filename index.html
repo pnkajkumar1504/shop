@@ -1,0 +1,482 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" class="rel">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <!-- Left: Logo -->
+    <a class="navbar-brand" href="https://steady-clafoutis-633757.netlify.app/">
+      <img src="logo_p.png" alt="Logo" width="40" height="40">
+    </a>
+
+    <!-- Toggler for collapse -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Center: Navigation -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Our Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="#">Service 1</a></li>
+            <li><a class="dropdown-item" href="#">Service 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right: Button -->
+      <div class="d-flex">
+        <a class="btn btn-primary" href="https://steady-clafoutis-633757.netlify.app/">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- heroSection -->
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active" style="background-image: url('/Herosection_1.jpg');">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1>Welcome to Our Website</h1>
+        <p>Delivering quality and excellence<br>in every step of the journey.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="carousel-item" style="background-image: url('/Herosection_2.jpg');">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1>Innovative Solutions</h1>
+        <p>Crafting modern solutions<br>for your business success.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="carousel-item" style="background-image: url('/Herosection_3.jpg');">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1>Creative Designs</h1>
+        <p>Designs that inspire and impact<br>the digital world.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="carousel-item" style="background-image: url('/Herosection_4.jpg');">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1>Build with Confidence</h1>
+        <p>Reliable service for a<br>stronger tomorrow.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left/Right Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- About Us -->
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side: Text and Tabs -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase text-primary mb-3">About Us</h6>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-3" id="aboutTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="company-tab" data-bs-toggle="tab" data-bs-target="#company"
+              type="button" role="tab" aria-controls="company" aria-selected="true">
+              Our Company
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission"
+              type="button" role="tab" aria-controls="mission" aria-selected="false">
+              Our Mission
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision"
+              type="button" role="tab" aria-controls="vision" aria-selected="false">
+              Our Vision
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="aboutTabContent">
+          <!-- Our Company -->
+          <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
+            <h3>Leading Through Innovation</h3>
+            <p>Our company is built on a foundation of innovation and excellence. We strive to deliver the best
+              solutions to our clients through cutting-edge technology and dedicated service.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+          <!-- Our Mission -->
+          <div class="tab-pane fade" id="mission" role="tabpanel" aria-labelledby="mission-tab">
+            <h3>Empowering Every Idea</h3>
+            <p>Our mission is to empower individuals and businesses by transforming ideas into reality through
+              sustainable and scalable digital solutions.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+          <!-- Our Vision -->
+          <div class="tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+            <h3>Creating a Better Tomorrow</h3>
+            <p>We envision a world where technology creates endless opportunities, enabling growth, education, and
+              sustainability for all.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Image -->
+      <!-- <div class="col-lg-6 text-center">
+        <img src="about-image.jpg" alt="About Us" class="img-fluid rounded shadow" />
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+
+<section class="py-5">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted mx-auto" style="max-width: 700px;">
+        We offer a wide range of professional services designed to help your business grow, innovate, and succeed in a
+        fast-paced digital world. Our expert team delivers excellence at every step.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-laptop fs-1 text-primary"></i>
+          </div>
+          <h5 class="fw-semibold">Online</h5>
+          <p>We provide top-notch Online cloths Specially Shirt In defferent Design</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-bar-chart-line fs-1 text-success"></i>
+          </div>
+          <h5 class="fw-semibold">Offline</h5>
+          <p>We provide top-notch Online cloths Specially Shirt In defferent Design</p>
+          <a href="#" class="btn btn-outline-success btn-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-palette fs-1 text-danger"></i>
+          </div>
+          <h5 class="fw-semibold">Shop No:- 01</h5>
+          <p>Creative design services tailored to reflect your brand identity and appeal.</p>
+          <a href="#" class="btn btn-outline-danger btn-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-code-slash fs-1 text-info"></i>
+          </div>
+          <h5 class="fw-semibold">Shop No:- 02</h5>
+          <p>We provide top-notch Online cloths Specially Shirt In defferent Design.</p>
+          <a href="#" class="btn btn-outline-info btn-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-phone fs-1 text-warning"></i>
+          </div>
+          <h5 class="fw-semibold">Shop No:- 03</h5>
+          <p>We provide top-notch Online cloths Specially Shirt In defferent Design.</p>
+          <a href="#" class="btn btn-outline-warning btn-sm">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded shadow-sm h-100 text-center">
+          <div class="mb-3">
+            <i class="bi bi-shield-lock fs-1 text-secondary"></i>
+          </div>
+          <h5 class="fw-semibold">Shop No:- 04</h5>
+          <p>We provide top-notch Online cloths Specially Shirt In defferent Design.</p>
+          <a href="#" class="btn btn-outline-secondary btn-sm">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Icons CDN (required for icons) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<!-- Project -->
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Our Projects</h2>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="projectTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all" type="button">All</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#app" type="button">App</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#products" type="button">Products</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#books" type="button">Books</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="projectTabContent">
+      <!-- All Tab -->
+      <div class="tab-pane fade show active" id="all">
+        <!-- Row 1 -->
+        <div class="row g-4 align-items-center mb-4">
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded">
+              <img src="/kidsGirls.avif" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 1">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 1</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded mt-n4">
+              <img src="/kids.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 2">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded">
+              <img src="youngBoy.avif" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 3">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 3</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded mt-4">
+              <img src="/youngGirl.avif" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 4">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 4</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded">
+              <img src="/Herosection_3.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 5">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 5</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-box position-relative overflow-hidden shadow-sm rounded mt-4">
+              <img src="/Herosection_4.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Project 6">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white">Project 6</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Tabs (You can duplicate and customize these tabs if needed) -->
+      <div class="tab-pane fade" id="app">
+        <p class="text-center text-muted">App projects will go here...</p>
+      </div>
+      <div class="tab-pane fade" id="products">
+        <p class="text-center text-muted">Product projects will go here...</p>
+      </div>
+      <div class="tab-pane fade" id="books">
+        <p class="text-center text-muted">Book projects will go here...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Us -->
+ 
+<section class="py-5 bg-light" id="contact">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">Feel free to get in touch with us for any inquiries or questions you might have.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left Side: Contact Form (Now on Left) -->
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Side: Map (Now on Right) -->
+      <div class="col-lg-6">
+        <div class="rounded overflow-hidden shadow-sm h-100">
+          <!-- Replace with your own map embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
+                  width="100%" height="100%" style="min-height: 400px; border:0;" 
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Column 1: About -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About</h5>
+        <p>We build digital experiences that grow your business. Let’s create something amazing together.</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://steady-clafoutis-633757.netlify.app/#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="https://steady-clafoutis-633757.netlify.app/#" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="https://steady-clafoutis-633757.netlify.app/#" class="text-white text-decoration-none">Projects</a></li>
+          <li><a href="https://steady-clafoutis-633757.netlify.app/#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Follow Us -->
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Follow Us</h5>
+        <a href="https://www.facebook.com/profile.php?id=100047014611501" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="https://x.com/pankaj829475?t=ZkrZucYAYqmMSr_UeRICvg&s=09" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=hc9ds6llx9rx&utm_content=m9dxvf1" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="https://www.linkedin.com/in/pankaj-kumar-186a582a5" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+      </div>
+    </div>
+
+    <hr class="border-light" />
+
+    <!-- Bottom Row -->
+    <div class="text-center">
+      <p class="mb-0">© 2025 All rights reserved to <strong>Pankaj</strong>.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="script.js"></script>
+</html>
+
+    
